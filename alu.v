@@ -7,6 +7,7 @@ module alu (
   //combinational logic block to react to any change in inputs
   always @(*) begin
     case (sel)
+      //3'bxxx = <bit-width>'<base><value>. It is "iteration" (sel) of the cases"
       3'b000: result = A + B;       // ADD
       3'b001: result = A - B;       // SUB
       3'b010: result = A & B;       // AND
